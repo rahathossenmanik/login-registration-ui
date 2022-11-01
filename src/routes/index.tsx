@@ -4,7 +4,7 @@ import Registration from '../pages/authentication/Registration';
 import ResetPassword from '../pages/authentication/ResetPassword';
 
 const publicRoutes = [
-	{ path: '/', element: <Login /> },
+	{ path: '/', element: <ResetPassword /> },
 	{ path: '/login', element: <Login /> },
 	{ path: '/forgot-password', element: <ForgetPwd /> },
 	{ path: '/registration', element: <Registration /> },
