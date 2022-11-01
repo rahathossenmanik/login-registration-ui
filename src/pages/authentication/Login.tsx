@@ -116,7 +116,7 @@ const Login = () => {
 													)}
 											</div>
 										</Row>
-										<Row className='mt-4'>
+										<Row className='mt-4 px-2'>
 											<Button color='primary' type='submit'>
 												Login
 											</Button>
