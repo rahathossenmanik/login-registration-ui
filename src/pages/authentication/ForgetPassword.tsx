@@ -58,13 +58,16 @@ const ForgetPassword = () => {
 											</div>
 										</Row>
 										<Row className='mt-4 px-2'>
-											<Button color='primary' type='submit'>
+											<Button color='danger' type='submit'>
 												Submit
 											</Button>
 										</Row>
 										<Row className='mt-3 text-center'>
 											<p>
-												Go to <Link to='/login'>Login !!!!</Link>
+												Go to{' '}
+												<Link className='text-danger' to='/login'>
+													Login !!!!
+												</Link>
 											</p>
 										</Row>
 									</Form>

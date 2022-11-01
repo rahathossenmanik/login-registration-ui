@@ -199,14 +199,16 @@ const Registration = () => {
 											</div>
 										</Row>
 										<Row className='mt-4 px-2'>
-											<Button color='primary' type='submit'>
+											<Button color='danger' type='submit'>
 												Register
 											</Button>
 										</Row>
 										<Row className='mt-3 text-center'>
 											<p>
 												Already Have a Account?{' '}
-												<Link to='/login'>Login !!!!</Link>
+												<Link className='text-danger' to='/login'>
+													Login !!!!
+												</Link>
 											</p>
 										</Row>
 									</Form>

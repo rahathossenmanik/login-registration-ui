@@ -117,17 +117,22 @@ const Login = () => {
 											</div>
 										</Row>
 										<Row className='mt-4 px-2'>
-											<Button color='primary' type='submit'>
+											<Button color='danger' type='submit'>
 												Login
 											</Button>
 										</Row>
 										<Row className='mt-3 text-center'>
 											<p>
-												New Here? <Link to='/registration'>Register !!!!</Link>
+												New Here?{' '}
+												<Link className='text-danger' to='/registration'>
+													Register !!!!
+												</Link>
 											</p>
 										</Row>
 										<Row className='text-center'>
-											<Link to='/forgot-password'>Forgotten Password</Link>
+											<Link className='text-danger' to='/forgot-password'>
+												Forgotten Password
+											</Link>
 										</Row>
 									</Form>
 								);
