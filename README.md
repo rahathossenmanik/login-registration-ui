@@ -1,5 +1,8 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This project have Login, Registration, Forgotten Password, Reset Pasword UI Designed with Reactstrap and MDBootstrap.
+Form handled with Formik.
+Navigation done with React Router DOM.
+Front-end for authentication is fully completed in this project.
 
 # Getting Started Web 
 1.	Install all latest node, yarn and dependency packages version
