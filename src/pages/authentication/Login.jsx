@@ -16,7 +16,7 @@ import { isRequired, passwordValidation } from '../../common/validations';
 
 const Login = () => {
 	//UseState Hooks
-	const [passwordType, setPasswordType] = useState<string>('password');
+	const [passwordType, setPasswordType] = useState('password');
 
 	//User Defined Functions Start
 	const togglePasswordType = () => {
@@ -25,7 +25,7 @@ const Login = () => {
 			: setPasswordType('password');
 	};
 
-	const onSubmit = (user: any) => {
+	const onSubmit = (user) => {
 		console.log(user);
 	};
 	//User Defined Functions End

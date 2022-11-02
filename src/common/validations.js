@@ -1,4 +1,4 @@
-export const usernameValidation = (username: string) => {
+export const usernameValidation = (username) => {
 	let error = '';
 	if (!username) {
 		error = 'Username is required!';
@@ -10,7 +10,7 @@ export const usernameValidation = (username: string) => {
 	return error;
 };
 
-export const emailValidation = (email: string) => {
+export const emailValidation = (email) => {
 	let error = '';
 	if (!email) {
 		error = 'Email address is required!';
@@ -20,7 +20,7 @@ export const emailValidation = (email: string) => {
 	return error;
 };
 
-export const passwordValidation = (pass: string) => {
+export const passwordValidation = (pass) => {
 	let error = '';
 	if (!pass) {
 		error = 'Password is required!';
@@ -36,13 +36,13 @@ export const passwordValidation = (pass: string) => {
 	return error;
 };
 
-export const confirmPasswordValidation = (pass1: string, pass2: string) => {
+export const confirmPasswordValidation = (pass1, pass2) => {
 	let error = '';
 	if (pass1 !== pass2) error = 'Password Did not match!!!';
 	return error;
 };
 
-export const isRequired = (user: string) => {
+export const isRequired = (user) => {
 	let error = '';
 	if (!user) error = 'This Field is required!';
 	return error;

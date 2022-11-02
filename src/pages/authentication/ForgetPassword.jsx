@@ -4,7 +4,7 @@ import { Button, Card, CardBody, Col, Form, Label, Row } from 'reactstrap';
 import { emailValidation } from '../../common/validations';
 
 const ForgetPassword = () => {
-	const onSubmit = (user: any) => {
+	const onSubmit = (user) => {
 		console.log(user);
 	};
 

@@ -14,13 +14,14 @@ import {
 } from 'reactstrap';
 import {
 	confirmPasswordValidation,
+	emailValidation,
 	passwordValidation,
+	usernameValidation,
 } from '../../common/validations';
 
-const ResetPassword = () => {
-	const [passwordType, setPasswordType] = useState<string>('password');
-	const [confirmPasswordType, setConfirmPasswordType] =
-		useState<string>('password');
+const Registration = () => {
+	const [passwordType, setPasswordType] = useState('password');
+	const [confirmPasswordType, setConfirmPasswordType] = useState('password');
 
 	const togglePasswordType = () => {
 		passwordType === 'password'
@@ -34,7 +35,7 @@ const ResetPassword = () => {
 			: setConfirmPasswordType('password');
 	};
 
-	const onSubmit = (user: any) => {
+	const onSubmit = (user) => {
 		console.log(user);
 	};
 
@@ -44,7 +45,12 @@ const ResetPassword = () => {
 				<Card>
 					<CardBody>
 						<Formik
-							initialValues={{ password: '', confirmPassword: '' }}
+							initialValues={{
+								username: '',
+								email: '',
+								password: '',
+								confirmPassword: '',
+							}}
 							onSubmit={() => {}}>
 							{(props) => {
 								const {
@@ -65,6 +71,55 @@ const ResetPassword = () => {
 											e.preventDefault();
 											onSubmit(values);
 										}}>
+										<Row className='mt-3'>
+											<div className='form-input'>
+												<Label htmlFor='username' className='label'>
+													Username
+												</Label>
+												<Field
+													autoComplete='off'
+													type='text'
+													name='username'
+													className={`form-control input ${
+														usernameValidation(values.username) &&
+														touched?.username &&
+														'is-invalid mb-0'
+													}`}
+													onChange={handleChange}
+													required
+												/>
+												{usernameValidation(values.username) &&
+													touched?.username && (
+														<span className='text-danger small'>
+															{usernameValidation(values.username)}
+														</span>
+													)}
+											</div>
+										</Row>
+										<Row className='mt-3'>
+											<div className='form-input'>
+												<Label htmlFor='email' className='label'>
+													Email
+												</Label>
+												<Field
+													autoComplete='off'
+													type='email'
+													name='email'
+													className={`form-control input ${
+														emailValidation(values.email) &&
+														touched?.email &&
+														'is-invalid mb-0'
+													}`}
+													onChange={handleChange}
+													required
+												/>
+												{emailValidation(values.email) && touched?.email && (
+													<span className='text-danger small'>
+														{emailValidation(values.email)}
+													</span>
+												)}
+											</div>
+										</Row>
 										<Row className='mt-3'>
 											<div className='form-input'>
 												<Label htmlFor='password' className='label'>
@@ -144,12 +199,12 @@ const ResetPassword = () => {
 										</Row>
 										<Row className='mt-4 px-2'>
 											<Button color='danger' type='submit'>
-												Submit
+												Register
 											</Button>
 										</Row>
 										<Row className='mt-3 text-center'>
 											<p>
-												Go to{' '}
+												Already Have a Account?{' '}
 												<Link className='text-danger' to='/login'>
 													Login !!!!
 												</Link>
@@ -166,4 +221,4 @@ const ResetPassword = () => {
 	);
 };
 
-export default ResetPassword;
+export default Registration;
