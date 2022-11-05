@@ -5,7 +5,7 @@ Navigation done with React Router DOM.
 Front-end for authentication is fully completed in this project.
 
 # View Live
-[Login Registration UI](https://txih7c-3000.preview.csb.app/)
+[Login Registration UI](https://txih7c-3001.preview.csb.app/)
 
 # Getting Started Web 
 1.	Install all latest node, yarn and dependency packages version
